@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Animation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <nav>
+            <a href="#">GSAP Animations</a>
+            <div class="list-nav">
+                <a href="#">Scroll Trigger</a>
+                <a href="#">Reveal Animation</a>
+                <a href="#">Documentation</a>
+                <a href="#">Blog</a>
+
+            </div>
+        </nav>
+        <div class="container-1">
+            <img src="./images/icon-background.png" id="gsap-background">
+            <img src="./images/GSAPIcons.png" id="gsap-icon">
+            <h2 class="header">Web Animation with <div id="heading">GSAP</div>
+            </h2>
+        </div>
+        <div class="container-2">
+            <div class="left-container">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#013220"
+                        d="M43.7,-56.8C55.1,-42.5,61.7,-27.3,63.1,-12.2C64.5,3,60.8,18,54.5,33.9C48.2,49.8,39.3,66.7,26.8,69.5C14.3,72.3,-1.9,61,-21.2,55.3C-40.4,49.5,-62.8,49.3,-70.8,39.1C-78.8,28.9,-72.4,8.6,-65.4,-8.1C-58.4,-24.9,-50.8,-38.1,-39.7,-52.5C-28.7,-66.8,-14.4,-82.2,0.9,-83.3C16.2,-84.4,32.3,-71.1,43.7,-56.8Z"
+                        transform="translate(100 100)" />
+                </svg>
+            </div>
+            <div class="right-container">
+                <div class="text-container">
+                    <h1>Greensock Animation Platform</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vel nesciunt aliquam ducimus incidunt
+                        ex hic. Molestias sunt expedita exercitationem nobis ea, dolore corporis eos beatae accusamus
+                        ipsam nihil quaerat adipisci placeat deleniti nisi, amet corrupti totam dolorem laborum
+                        consectetur aliquam perspiciatis illo reprehenderit laboriosam! Temporibus non dicta architecto
+                        eaque optio minima sint harum accusantium. Rem optio beatae facilis suscipit rerum modi id minus
+                        odit deserunt corrupti! Tempore labore odit laboriosam, voluptates magni ipsa iusto totam
+                        maxime! Laudantium, eaque tenetur fugit laboriosam repellat pariatur dignissimos nobis
+                        repudiandae, recusandae in omnis aut, voluptates nam. Praesentium maiores beatae rerum vel
+                        provident neque exercitationem consequatur natus. Quis dolor assumenda aut at velit, vero
+                        debitis dolores unde, eveniet nulla illo voluptates optio, nesciunt reprehenderit cumque alias
+                        eos perferendis! Facere consequuntur nihil ea ad natus voluptas sit blanditiis impedit
+                        perferendis veritatis, mollitia maxime quae voluptatum sapiente numquam repudiandae ratione et
+                        saepe totam laboriosam quam assumenda? Fuga saepe debitis aut sequi, cumque id cupiditate
+                        similique temporibus, repellendus consequuntur voluptatibus doloremque numquam quis porro ad
+                        tempora ex ipsa excepturi. Porro iusto ex veritatis neque maxime asperiores fugiat vero ipsa.
+                        Quidem commodi eaque nobis suscipit numquam illo explicabo sapiente! Itaque alias quisquam natus
+                        error nihil omnis corporis quo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-3">
+            <div class="left">
+                <h2>How does ScrollTrigger work? Is it just like IntersectionObserver?</h2><br>
+                <p>
+                    ScrollTrigger does NOT constantly watch every element and check its positioning in the viewport
+                    on each
+                    tick. We're obsessed with performance and that'd be far too costly. Instead, ScrollTrigger does
+                    the
+                    processing up-front to figure out where the start/end points are in the natural document flow.
+                    In other
+                    words, "this ScrollTrigger will be active when the scrollbar is between ___ and ____". Then, it
+                    debounces the "scroll" events and only updates things on the next requestAnimationFrame,
+                    perfectly
+                    synced with GSAP and screen refreshes. It ONLY watches the scroll position. Period. That means
+                    it's
+                    FAST.
+
+                    ScrollTrigger automatically listens for viewport/scroller "resize" events and recalculates all
+                    the
+                    start/end positions accordingly (onRefresh). In fact, since resizing/refreshing is
+                    CPU-intensive, it
+                    waits until there's a 200ms gap in resize events before starting its work. Yeah, we looked for
+                    every
+                    opportunity to maximize performance.
+
+                    IntersectionObserver is a native feature in most modern browsers that's different in the
+                    following ways:
+
+                    It constantly "watches" elements to sense when they enter/leave regardless of scrolling.
+                    It's not helpful for tracking an element's position between two points, like for scrubbing an
+                    animation
+                    accordingly.
+                    It does let you watch multiple elements and have a single callback triggered that could loop
+                    through and
+                    fire a staggered animation on just the elements that entered, for example.
+                    ScrollTrigger does not use IntersectionObserver under the hood because it lacks the necessary
+                    functionality and compatibility. You can certainly use IntersectionObserver and ScrollTrigger
+                    together.
+                </p>
+            </div>
+            <div class="right">
+                <h2>1</h2>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/CSSRulePlugin.min.js"
+    integrity="sha512-aUM9IHJr7TYwzhhbK0G9UQX6WNq6/1HC+lsh+EuqJyaOB44csmHMRVHcIVMWfrruvpVTtEqshD28L+0XxMH//g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+
+
+</html>

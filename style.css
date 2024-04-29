@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+nav{
+    width: 100%;
+    height: 2%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+nav a{
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 10px;
+    font-family: 'Poppins'sans-serif;
+}
+
+.list-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+}
+
+.container-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#gsap-icon{
+    position: absolute;
+    width: 25%;
+    margin-left: -10%;
+    z-index: 2;
+}
+
+#gsap-background{
+    position: absolute;
+    width: 100%;
+}
+
+.header{
+    color: green;
+    position: absolute;
+    top: 10%;
+    font-size: 50px;
+    letter-spacing: 2px;
+    gap: 10px;
+}
+
+h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ #heading{
+    position: relative;
+    display: block;
+}
+
+.container-2{
+   height: 90vh;
+   width: 100%; 
+   display: flex;
+   flex-direction: row;
+   box-shadow: 0 10px 50px solid #013220;
+}
+.left-container
+{
+    background-color: black;
+    width: 36%;
+}
+
+svg{
+    width: 100%;
+}
+
+.right-container{
+
+    background-color: black;
+    width: 64%;
+}
+
+.text-container{
+    width: 97%;
+    height: 70%;
+    padding: 33px 10%;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background:  rgb(33 25 25 / 45%);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    color:  rgba(143, 123, 123, 0.45);
+    backdrop-filter: blur(15px);
+    
+}
+
+.text-container h1{
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 2px #013220 ;
+}
+
+.text-container p{
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    line-height: 33px;
+    text-align: center;
+    width: 100%;
+    max-height: 500px;
+    word-wrap: break-word;
+    overflow-wrap: unset;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+}
+
+.container-3{
+    width: 100%;
+    background-color: #013220;
+    margin-top: -10%;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.container-3 .left{
+    width: 70%;
+    background:  rgb(33 25 25 / 45%);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    color:  rgba(143, 123, 123, 0.45);
+    backdrop-filter: blur(25px); 
+    height: 20%;
+    padding: 5%;
+
+
+}
+
+.container-3 .right{
+    width: 100px;
+    background-color: wheat;
+    color: black;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10.4%;
+    top: 20px;
+    background:  rgb(33 25 25 / 45%);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    color:  rgba(143, 123, 123, 0.45);
+    backdrop-filter: blur(25px);
+    
+}
+
+
+
+.container-3 .right h2{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #716666;
+    position: absolute;
+    font-size: 33px;
+}
+
+.container-3 p{
+    color: #716666;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    justify-items: flex-start;
+    line-height: 36px;
+    font-size: 18px;
+
+}
